@@ -30,7 +30,7 @@ public:
     virtual void run(){
         SubarrayResult<int> result = findMaximumSubarray(data_, start_, end_);
         std::cout<<"result"<<std::endl;
-        std::cout<<"low="<<result.low_<<" high="<<result.high_<<" sum="<<result.sum_<<std::endl;
+        std::cout<<result.toString()<<std::endl;
     }
 };
 
@@ -48,7 +48,7 @@ public:
     virtual void run(){
         SubarrayResult<int> result = findMaximumSubarray2(data_, start_, end_);
         std::cout<<"result2"<<std::endl;
-        std::cout<<"low="<<result.low_<<" high="<<result.high_<<" sum="<<result.sum_<<std::endl;
+        std::cout<<result.toString()<<std::endl;
     }
 };
 

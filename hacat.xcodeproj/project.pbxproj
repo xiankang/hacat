@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5268135620C072D400F3F08D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5268135520C072D400F3F08D /* main.cpp */; };
+		52A0CDB120C50F79001BDED1 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52A0CDAF20C50F79001BDED1 /* matrix.cpp */; };
 		52F79F5820C3093E00975063 /* test_find_maximum_subarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F79F5620C3093E00975063 /* test_find_maximum_subarray.cpp */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,9 @@
 		5266C69320C064210064D67B /* insertion_sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = insertion_sort.hpp; sourceTree = "<group>"; };
 		5268135220C072D400F3F08D /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		5268135520C072D400F3F08D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		52A0CDAF20C50F79001BDED1 /* matrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = matrix.cpp; sourceTree = "<group>"; };
+		52A0CDB020C50F79001BDED1 /* matrix.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = matrix.hpp; sourceTree = "<group>"; };
+		52A0CDB420C51847001BDED1 /* object.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = object.hpp; sourceTree = "<group>"; };
 		52F79F4E20C2FA0B00975063 /* find_maximum_subarray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = find_maximum_subarray.hpp; sourceTree = "<group>"; };
 		52F79F5120C3086300975063 /* i_task.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = i_task.hpp; sourceTree = "<group>"; };
 		52F79F5620C3093E00975063 /* test_find_maximum_subarray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_find_maximum_subarray.cpp; sourceTree = "<group>"; };
@@ -50,6 +54,7 @@
 		5266C68720C062EB0064D67B = {
 			isa = PBXGroup;
 			children = (
+				52A0CDB220C51833001BDED1 /* base */,
 				5266C69020C063710064D67B /* algorithm */,
 				5268135420C072D400F3F08D /* test */,
 				5268135320C072D400F3F08D /* Products */,
@@ -95,10 +100,20 @@
 			path = test;
 			sourceTree = "<group>";
 		};
+		52A0CDB220C51833001BDED1 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				52A0CDB420C51847001BDED1 /* object.hpp */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		52F79F4C20C2F26D00975063 /* divide_conquer */ = {
 			isa = PBXGroup;
 			children = (
 				52F79F4E20C2FA0B00975063 /* find_maximum_subarray.hpp */,
+				52A0CDAF20C50F79001BDED1 /* matrix.cpp */,
+				52A0CDB020C50F79001BDED1 /* matrix.hpp */,
 			);
 			path = divide_conquer;
 			sourceTree = "<group>";
@@ -161,6 +176,7 @@
 			files = (
 				5268135620C072D400F3F08D /* main.cpp in Sources */,
 				52F79F5820C3093E00975063 /* test_find_maximum_subarray.cpp in Sources */,
+				52A0CDB120C50F79001BDED1 /* matrix.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

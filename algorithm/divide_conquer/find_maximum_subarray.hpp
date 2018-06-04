@@ -9,9 +9,11 @@
 #define find_maximum_subarray_hpp
 
 #include <stdio.h>
+#include "../../base/object.hpp"
+#include <sstream>
 
 template<class T>
-class SubarrayResult {
+class SubarrayResult :public Object {
 public:
     int low_;
     int high_;
@@ -37,6 +39,12 @@ public:
 //        sum_ = subarrayResult.sum_;
 //        return *this;
 //    }
+    
+    std::string toString() {
+        std::ostringstream ostr;
+        ostr<<"low="<<low_<<" high="<<high_<<" sum="<<sum_;
+        return ostr.str();
+    }
 };
 
 template<class T>
