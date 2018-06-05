@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include "test_base.hpp"
 #include "test_find_maximum_subarray.hpp"
+#include "test_matrix.hpp"
 
 using namespace std;
 
@@ -20,7 +21,8 @@ using namespace std;
 //}
 
 int main(int argc, const char * argv[]){
-    TestBase* pTest = new TestFindMaximumSubarray();
+//    TestBase* pTest = new TestFindMaximumSubarray();
+    TestBase* pTest = new TestMatrix();
     pTest->test();
     delete pTest;
     return 0;

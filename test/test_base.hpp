@@ -13,6 +13,7 @@
 #include <iostream>
 #include "task_base.hpp"
 #include <list>
+#include "../base/utility.hpp"
 
 class TestBase{
 private:
@@ -38,10 +39,10 @@ public:
     virtual void test() {
         for(std::list<TaskBase*>::iterator iter = task_list_.begin(); iter!= task_list_.end(); iter++)
         {
-            std::time_t start_time = std::clock();
+            auto start_time = Utility::getTime();
             (*iter)->run();
-            std::time_t end_time = std::clock();
-            std::cout<<float(end_time - start_time)/1000<<" seconds expend!"<<std::endl;
+            auto end_time = Utility::getTime();
+            std::cout<<(float)(end_time - start_time)/1000<<" seconds expend!"<<std::endl;
         }
     }
 };
