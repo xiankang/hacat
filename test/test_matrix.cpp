@@ -9,7 +9,7 @@
 #include "../algorithm/divide_conquer/matrix.hpp"
 
 template<class T>
-class MatrixTask: public TaskBase {
+class MatrixTask: public ITask {
 private:
     Matrix<T> m1_;
     Matrix<T> m2_;
@@ -25,10 +25,11 @@ public:
         std::cout<<"m2"<<std::endl;
         std::cout<<m2_.toString()<<std::endl;
     }
+    ~MatrixTask(){}
 };
 
 TestMatrix::TestMatrix() {
-    Matrix<int> m1(100,100);
-    Matrix<int> m2(100,100);
-    addTask(new MatrixTask<int>(m1, m2));
+    Matrix<int> m1(3,3);
+    Matrix<int> m2(3,3);
+    addTask(std::unique_ptr<ITask>(new MatrixTask<int>(m1, m2)));
 }

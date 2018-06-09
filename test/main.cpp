@@ -13,18 +13,15 @@
 
 using namespace std;
 
-//template<class T>
-//void run(T) {
-//    TestBase* pTest = new T();
-//    pTest->run();
-//    delete pTest;
-//}
+void runTest(TestBase& t) {
+    t.test();
+}
 
 int main(int argc, const char * argv[]){
-//    TestBase* pTest = new TestFindMaximumSubarray();
-    TestBase* pTest = new TestMatrix();
-    pTest->test();
-    delete pTest;
+//    TestFindMaximumSubarray test_find_maximum_subarray;
+//    runTest(test_find_maximum_subarray);
+    TestMatrix test_matrix;
+    runTest(test_matrix);
     return 0;
 }
 

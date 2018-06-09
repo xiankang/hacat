@@ -16,6 +16,5 @@ class TestMatrix : public TestBase{
 private:
 public:
     TestMatrix();
-    ~TestMatrix();
 };
 #endif /* test_matrix_hpp */

@@ -13,8 +13,8 @@ class Utility {
 public:
     static float getTime() {
         auto tp = std::chrono::steady_clock::now();
-        std::time_t cur_time = std::chrono::duration_cast<std::chrono::nanoseconds>(tp.time_since_epoch()).count();
-        return (float)cur_time / 1000000;
+        float cur_time = std::chrono::duration_cast<std::chrono::nanoseconds>(tp.time_since_epoch()).count() / 1000000.0f;
+        return cur_time;
     }
 };
 #endif /* utility_hpp */

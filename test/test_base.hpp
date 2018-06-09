@@ -11,38 +11,31 @@
 #include <stdio.h>
 #include <ctime>
 #include <iostream>
-#include "task_base.hpp"
+#include "i_task.hpp"
 #include <list>
 #include "../base/utility.hpp"
+#include <iomanip>
 
 class TestBase{
 private:
-    std::list<TaskBase*> task_list_;
+    std::list<std::unique_ptr<ITask>> task_list_;
 public:
     TestBase() {
     }
     
-    ~TestBase() {
-        clearTask();
+    virtual ~TestBase() {
     }
-    virtual void addTask(TaskBase* task){
-        task_list_.push_back(task);
+    virtual void addTask(std::unique_ptr<ITask> task){
+        task_list_.push_back(move(task));
     }
     
-    virtual void clearTask(){
-        for(std::list<TaskBase*>::iterator iter = task_list_.begin(); iter!= task_list_.end(); iter++)
-        {
-            task_list_.erase(iter++);
-            delete *iter;
-        }
-    }
     virtual void test() {
-        for(std::list<TaskBase*>::iterator iter = task_list_.begin(); iter!= task_list_.end(); iter++)
+        for(std::list<std::unique_ptr<ITask>>::iterator iter = task_list_.begin(); iter!= task_list_.end(); iter++)
         {
             auto start_time = Utility::getTime();
             (*iter)->run();
             auto end_time = Utility::getTime();
-            std::cout<<(float)(end_time - start_time)/1000<<" seconds expend!"<<std::endl;
+            std::cout<<(end_time - start_time)/1000.0f<<" seconds expend!"<<std::endl;
         }
     }
 };

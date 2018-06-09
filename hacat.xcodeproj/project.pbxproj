@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5251655320C8D9BC00BA5D92 /* i_task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5251655220C8D9BC00BA5D92 /* i_task.cpp */; };
 		5268135620C072D400F3F08D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5268135520C072D400F3F08D /* main.cpp */; };
 		52A0CDB120C50F79001BDED1 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52A0CDAF20C50F79001BDED1 /* matrix.cpp */; };
 		52A0CDB820C548CE001BDED1 /* test_matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52A0CDB620C548CE001BDED1 /* test_matrix.cpp */; };
@@ -27,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		5215CD4E20C1B341008768B7 /* merge_sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = merge_sort.hpp; sourceTree = "<group>"; };
-		52431E5F20C439F800CCD7E9 /* task_base.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = task_base.hpp; sourceTree = "<group>"; };
+		5251655220C8D9BC00BA5D92 /* i_task.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = i_task.cpp; sourceTree = "<group>"; };
 		5266C69320C064210064D67B /* insertion_sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = insertion_sort.hpp; sourceTree = "<group>"; };
 		5268135220C072D400F3F08D /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		5268135520C072D400F3F08D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -96,10 +97,10 @@
 			children = (
 				5268135520C072D400F3F08D /* main.cpp */,
 				52F79F5120C3086300975063 /* i_task.hpp */,
+				5251655220C8D9BC00BA5D92 /* i_task.cpp */,
 				52F79F5620C3093E00975063 /* test_find_maximum_subarray.cpp */,
 				52F79F5720C3093E00975063 /* test_find_maximum_subarray.hpp */,
 				52F79F5A20C30D5200975063 /* test_base.hpp */,
-				52431E5F20C439F800CCD7E9 /* task_base.hpp */,
 				52A0CDB620C548CE001BDED1 /* test_matrix.cpp */,
 				52A0CDB720C548CE001BDED1 /* test_matrix.hpp */,
 			);
@@ -185,6 +186,7 @@
 				5268135620C072D400F3F08D /* main.cpp in Sources */,
 				52F79F5820C3093E00975063 /* test_find_maximum_subarray.cpp in Sources */,
 				52A0CDB120C50F79001BDED1 /* matrix.cpp in Sources */,
+				5251655320C8D9BC00BA5D92 /* i_task.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

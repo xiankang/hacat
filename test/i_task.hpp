@@ -13,6 +13,7 @@
 class ITask {
 public:
     virtual void run() = 0;
+    virtual ~ITask() = 0;
 };
 
 #endif /* i_test_base_hpp */

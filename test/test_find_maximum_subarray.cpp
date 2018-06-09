@@ -16,12 +16,9 @@ TestFindMaximumSubarray::TestFindMaximumSubarray() {
         std::cout << data_[i] << " ";
     }
     std::cout<<std::endl;
-    
-    Task1<int> *task1 = new Task1<int>(data_, 0, MAX-1);
-    Task2<int> *task2 = new Task2<int>(data_, 0, MAX-1);
-    
-    addTask(task1);
-    addTask(task2);
+        
+    addTask(std::unique_ptr<ITask>(new Task1<int>(data_, 0, MAX-1)));
+    addTask(std::unique_ptr<ITask>(new Task2<int>(data_, 0, MAX-1)));
 }
 
 TestFindMaximumSubarray::~TestFindMaximumSubarray() {
