@@ -17,6 +17,6 @@ public:
     virtual std::string toString(){
         return "";
     }
-    virtual ~Object() {}
+    virtual ~Object(){}
 };
 #endif /* object_hpp */
