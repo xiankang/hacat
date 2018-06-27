@@ -9,6 +9,8 @@
 #define utility_hpp
 
 #include <stdio.h>
+#include <chrono>
+
 class Utility {
 public:
     static float getTime() {

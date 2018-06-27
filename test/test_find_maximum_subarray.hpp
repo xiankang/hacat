@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include "test_base.hpp"
 #include "i_task.hpp"
-#include "../algorithm/divide_conquer/find_maximum_subarray.hpp"
+#include "find_maximum_subarray.hpp"
 #include <iostream>
 
 const static int MAX = 100000;

@@ -9,7 +9,7 @@
 #define matrix_hpp
 
 #include <stdio.h>
-#include "../../base/object.hpp"
+#include "object.hpp"
 #include <sstream>
 #include <iostream>
 #include <memory>
