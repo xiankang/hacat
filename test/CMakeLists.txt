@@ -12,6 +12,8 @@ set(test_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/test_find_maximum_subarray.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_matrix.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_matrix.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_sort.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_sort.hpp
 )
 
 #添加头文件目录
