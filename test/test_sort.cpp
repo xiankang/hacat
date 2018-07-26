@@ -3,6 +3,7 @@
 #include "i_task.hpp"
 #include "quick_sort.hpp"
 #include "counting_sort.hpp"
+#include "radix_sort.hpp"
 
 template<class T>
 class HeapSortTask: public ITask {
@@ -102,8 +103,40 @@ private:
     int length_;
 };
 
+template<class T>
+class RadixSortTask: public ITask {
+public:
+    RadixSortTask(int length) : length_(length) {
+        data_ = new T[length_];
+        for(int i=0; i<length_; i++)
+            data_[i] = rand() % 100;
+    }
+    ~RadixSortTask() {
+        delete data_;
+        data_ = nullptr;
+    }
+    
+    void run() {
+        std::cout<<"data"<<std::endl;
+        for(int i=0; i<length_; i++){
+            std::cout<< data_[i] <<" ";
+        }
+        
+        std::cout<<std::endl<<"sort by radix sort"<<std::endl;
+        radixSort(data_, length_, 2);
+        for(int i=0; i<length_; i++){
+            std::cout<< data_[i] <<" ";
+        }
+    }
+private:
+    RadixSortTask();
+    T* data_;
+    int length_;
+};
+
 TestSort::TestSort() {
     addTask(std::unique_ptr<ITask>(new HeapSortTask<int>(300)));
     addTask(std::unique_ptr<ITask>(new QuickSortTask<int>(300)));
     addTask(std::unique_ptr<ITask>(new CountingSortTask<int>(300)));
+    addTask(std::unique_ptr<ITask>(new RadixSortTask<int>(300)));
 }
