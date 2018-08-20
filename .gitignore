@@ -36,6 +36,8 @@
 #log
 *.log
 
+#vscode
+*.vscode
 
 # Folders
 bin/
