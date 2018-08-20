@@ -6,7 +6,7 @@
 //
 
 #include "test_matrix.hpp"
-#include "../algorithm/divide_conquer/matrix.hpp"
+#include "divide_conquer/matrix.hpp"
 
 template<class T>
 class MatrixTask: public ITask {

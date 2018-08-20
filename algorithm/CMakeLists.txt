@@ -1,3 +1,6 @@
+cmake_minimum_required(VERSION 3.10.0)
+set(FIND_MODE REQUIRED)
+
 project(algorithm)
 
 add_subdirectory(base)
@@ -11,11 +14,20 @@ set(algorithm_SRCS
 )
 
 
-source_group(base ${base_SRCS})
-source_group(divide_conquer ${divide_conquer_SRCS})
-source_group(sort ${sort_SRCS})
+source_group(base 
+FILES
+${base_SRCS})
+
+source_group(divide_conquer 
+FILES
+${divide_conquer_SRCS})
+
+source_group(sort 
+FILES
+${sort_SRCS})
 
 #添加头文件目录
-include_directories(./base ./divide_conquer ./sort)
+# Find includes in corresponding build directories
+set(CMAKE_INCLUDE_CURRENT_DIR TRUE)
 
-add_library(algorithm ${algorithm_SRCS})
+add_library(${PROJECT_NAME} ${algorithm_SRCS})

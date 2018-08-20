@@ -13,8 +13,9 @@
 #include <iostream>
 #include "i_task.hpp"
 #include <list>
-#include "utility.hpp"
+#include "base/utility.hpp"
 #include <iomanip>
+#include <memory>
 
 class TestBase{
 private:

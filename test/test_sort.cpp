@@ -1,9 +1,9 @@
 #include "test_sort.hpp"
-#include "heap_sort.hpp"
+#include "sort/heap_sort.hpp"
 #include "i_task.hpp"
-#include "quick_sort.hpp"
-#include "counting_sort.hpp"
-#include "radix_sort.hpp"
+#include "sort/quick_sort.hpp"
+#include "sort/counting_sort.hpp"
+#include "sort/radix_sort.hpp"
 
 template<class T>
 class HeapSortTask: public ITask {

@@ -17,7 +17,7 @@ set(test_SRCS
 )
 
 #添加头文件目录
-include_directories(../algorithm/base ../algorithm/divide_conquer ../algorithm/sort)
+# include_directories(../algorithm/base ../algorithm/divide_conquer ../algorithm/sort)
 
 #添加包含链接库
 # link_libraries(algorithm)
@@ -29,5 +29,10 @@ include_directories(../algorithm/base ../algorithm/divide_conquer ../algorithm/s
 # set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 #生成静态链接库
-add_library(test ${test_SRCS})
-target_link_libraries(test algorithm)
+add_library(${PROJECT_NAME} ${test_SRCS})
+
+# Find includes in corresponding build directories
+set(CMAKE_INCLUDE_CURRENT_DIR TRUE)
+
+include(AlgorithmBins)
+use_algorithm_module(${PROJECT_NAME})

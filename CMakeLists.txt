@@ -102,3 +102,16 @@ project(hacat)
 add_subdirectory(algorithm)
 add_subdirectory(test)
 add_subdirectory(app)
+
+# Find includes in corresponding build directories
+set(CMAKE_INCLUDE_CURRENT_DIR TRUE)
+
+#指定生成目标
+add_executable(hacat ${app_SRCS})
+
+#添加test模块
+include(TestBins)
+use_test_module(${PROJECT_NAME})
+
+include(AlgorithmBins)
+use_algorithm_module(${PROJECT_NAME})

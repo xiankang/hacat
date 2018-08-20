@@ -9,7 +9,7 @@
 #define find_maximum_subarray_hpp
 
 #include <stdio.h>
-#include "object.hpp"
+#include "base/object.hpp"
 #include <sstream>
 
 template<class T>
