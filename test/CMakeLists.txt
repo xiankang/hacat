@@ -1,4 +1,6 @@
-project(test)
+cmake_minimum_required(VERSION 3.10.0)
+
+project(autotest)
 #查找当前目录下的所有源文件
 #并将名字保存到DIR_LIB_SRCS变量
 # aux_source_directory(. DIR_LIB_SRCS)

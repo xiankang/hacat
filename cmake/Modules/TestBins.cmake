@@ -3,6 +3,6 @@ set(TEST_INCLUDE_DIRS
 )
 
 macro(use_test_module _target)
-    target_link_libraries(${_target} test)
+    target_link_libraries(${_target} autotest)
     include_directories(${TEST_INCLUDE_DIRS})
 endmacro()
