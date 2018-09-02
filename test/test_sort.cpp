@@ -135,8 +135,4 @@ private:
 };
 
 TestSort::TestSort() {
-    addTask(std::unique_ptr<ITask>(new HeapSortTask<int>(300)));
-    addTask(std::unique_ptr<ITask>(new QuickSortTask<int>(300)));
-    addTask(std::unique_ptr<ITask>(new CountingSortTask<int>(300)));
-    addTask(std::unique_ptr<ITask>(new RadixSortTask<int>(300)));
 }

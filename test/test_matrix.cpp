@@ -51,6 +51,4 @@ public:
 TestMatrix::TestMatrix() {
     Matrix<int> m1(51,51);
     Matrix<int> m2(51,51);
-    addTask(std::unique_ptr<ITask>(new MatrixTask<int>(m1, m2)));
-    addTask(std::unique_ptr<ITask>(new MatrixTask2<int>(m1, m2)));
 }

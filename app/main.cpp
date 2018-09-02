@@ -11,19 +11,16 @@
 #include "test_find_maximum_subarray.hpp"
 #include "test_matrix.hpp"
 #include "test_sort.hpp"
+#include "test_knapsack.hpp"
+#include "test_manager.hpp"
 
 using namespace std;
-
-void runTest(TestBase& t) {
-    t.test();
-}
+TestInstance(TestKnapsack)
 
 int main(int argc, const char * argv[]){
-//    TestFindMaximumSubarray test_find_maximum_subarray;
-//    runTest(test_find_maximum_subarray);
-    // TestMatrix test_matrix;
-    TestSort test_sort;
-    runTest(test_sort);
+	TestManager::instance()->test();
+
+	system("pause");
     return 0;
 }
 

@@ -10,12 +10,17 @@ set(test_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/i_task.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/i_task.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_base.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_base.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_find_maximum_subarray.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_find_maximum_subarray.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_matrix.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_matrix.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_sort.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_sort.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_knapsack.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_knapsack.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_manager.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_manager.cpp
 )
 
 #添加头文件目录
