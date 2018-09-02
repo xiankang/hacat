@@ -12,6 +12,7 @@
 
 #include "i_task.hpp"
 #include "test_manager.hpp"
+#include <iostream>
 
 #define EnableTest(TestClass)\
 private:\
@@ -25,18 +26,18 @@ public:\
 	}
 
 #define TestInstance(TestClass)\
-TestClass TestClass::instance;
+TestClass TestClass##instance;
 
 
 class TestBase : public ITask{
 
 public:
     TestBase() {
-
+        TestManager::instance()->addTask(this);
     }
     
     virtual ~TestBase() {
-
+        TestManager::instance()->removeTask(this);
     }
     
 	virtual void run(){}

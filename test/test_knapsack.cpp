@@ -1,5 +1,5 @@
 #include "test_knapsack.hpp"
-#include "common\knapsack.hpp"
+#include "common/knapsack.hpp"
 #include <iostream>
 
 
