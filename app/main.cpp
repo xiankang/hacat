@@ -5,19 +5,12 @@
 //  Created by MacBook Pro on 2018/6/1.
 //
 
-#include <iostream>
-#include <stdlib.h>
-#include "test_base.hpp"
-#include "test_find_maximum_subarray.hpp"
-#include "test_matrix.hpp"
-#include "test_sort.hpp"
-#include "test_knapsack.hpp"
 #include "test_manager.hpp"
-
-using namespace std;
-TestInstance(TestKnapsack)
+#include "test_red_black_tree.h"
 
 int main(int argc, const char * argv[]){
+	RegisterTest(test_red_black_tree)
+
 	TestManager::instance()->test();
 
 	system("pause");

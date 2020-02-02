@@ -95,6 +95,33 @@ endif()
 # 	endif()
 # endif()
 
+# Handle debugmode compiles (this will require further work for proper WIN32-setups)
+if(WIN32)
+message(CMAKE_CXX_FLAGS_DEBUG = ${CMAKE_CXX_FLAGS_DEBUG})
+#set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /P")
+message(setCMAKE_CXX_FLAGS_DEBUG = ${CMAKE_CXX_FLAGS_DEBUG})
+endif()
+#if(UNIX)
+#  set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g")
+#  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g")
+#  set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -g")
+#  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -g")
+#endif()
+#
+## Set warning levels for different builds
+#if(UNIX)
+#	set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -fPIC -std=c++11 --no-warnings")
+#	set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -fPIC -std=c++11 --no-warnings")
+#	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -fPIC -std=c++11 -Wall -Wfatal-errors -Wextra")
+#	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fPIC -std=c++11 -Wall -Wfatal-errors -Wextra")
+#elseif(WIN32)
+#  # Disable warnings in Visual Studio 8 and above and add /MP
+#  set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /Zi /wd4996 /wd4355 /wd4244 /wd4985 /wd4267 /wd4251 /MP")
+#  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /Zi /wd4996 /wd4355 /wd4244 /wd4267 /wd4251 /MP")
+#  set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} /wd4996 /wd4355 /wd4244 /wd4985 /wd4267 /wd4251 /MP")
+#  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /wd4996 /wd4355 /wd4244 /wd4985 /wd4267 /wd4251 /MP")
+#  set(CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS_RELEASE} /debug")
+#endif()
 #项目信息
 project(hacat)
 

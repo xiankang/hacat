@@ -19,9 +19,16 @@ set(test_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/test_sort.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_knapsack.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_knapsack.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_red_black_tree.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_red_black_tree.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/string_ex.h
     ${CMAKE_CURRENT_SOURCE_DIR}/test_manager.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/test_manager.cpp
 )
+
+source_group(Source 
+FILES
+${test_SRCS})
 
 #添加头文件目录
 # include_directories(../algorithm/base ../algorithm/divide_conquer ../algorithm/sort)

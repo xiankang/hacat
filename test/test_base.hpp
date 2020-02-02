@@ -11,33 +11,18 @@
 #include <stdio.h>
 
 #include "i_task.hpp"
-#include "test_manager.hpp"
+
 #include <iostream>
-
-#define EnableTest(TestClass)\
-private:\
-static TestClass instance;\
-public:\
-	TestClass() {\
-		TestManager::instance()->addTask(this);\
-	}\
-	~TestClass() {\
-		TestManager::instance()->removeTask(this);\
-	}
-
-#define TestInstance(TestClass)\
-TestClass TestClass##instance;
-
 
 class TestBase : public ITask{
 
 public:
     TestBase() {
-        TestManager::instance()->addTask(this);
+
     }
     
     virtual ~TestBase() {
-        TestManager::instance()->removeTask(this);
+
     }
     
 	virtual void run(){}
