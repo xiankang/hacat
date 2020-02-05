@@ -70,24 +70,29 @@ public:
 			node->left->parent = y;
 			y->is_black = node->is_black;
 		}
-		else if (node->left == nullptr)
+		else if (node->right != nullptr)
 		{
 			x = node->right;
 			trans_parent(node, x);
 		}
-		else if (node->right == nullptr)
+		else if (node->left != nullptr)
 		{
 			x = node->left;
 			trans_parent(node, x);
 		}
 		else {
-			//no fix
+			//no fix, delete root
 			if (root == node)
-			{
-				// only root;
-				delete node;
 				root = nullptr;
+			else {
+				if (node == node->parent->left)
+					node->parent->left = nullptr;
+				else
+					node->parent->right = nullptr;
 			}
+
+			delete node;
+			return;
 		}
 		
 		//fix
@@ -166,7 +171,8 @@ private:
 			u->parent->left = v;
 		else
 			u->parent->right = v;
-		v->parent = u->parent;
+		if(v != nullptr)
+			v->parent = u->parent;
 	}
 	//
 	red_black_tree_node<T>* simple_insert(T value)
@@ -352,6 +358,9 @@ private:
 	//
 	void delete_fix_tree(red_black_tree_node<T>* x)
 	{
+		if (x == nullptr)
+			return;
+
 		//because black height of x is lower by uncle, so fix it 
 		while (x != root && x->is_black == true)
 		{

@@ -11,7 +11,7 @@ public:
 	void run()
 	{
 		//
-		int data[] = { 1,2,3,4,5,8,10,6,7 };
+		int data[] = { 1,2,3,4,5,9,10,7,8,6 };
 		int length = sizeof(data) / sizeof(data[0]);
 		red_black_tree<int> r_b_tree;
 
@@ -22,13 +22,13 @@ public:
 		std::cout << "test red black tree" << std::endl;
 
 		tranverse(r_b_tree);
-
-		int remove[] = { 7 };
-		length = sizeof(remove) / sizeof(remove[0]);
+		
+		int* remove = data;
+		//length = sizeof(remove) / sizeof(remove[0]);
 		for (int i = 0; i < length; ++i)
 		{
-			std::cout << "remove" << data[i] << std::endl;
-			r_b_tree.remove(data[i]);
+			std::cout << "remove " << remove[i] << std::endl;
+			r_b_tree.remove(remove[i]);
 			tranverse(r_b_tree);
 		}
 	}
@@ -37,7 +37,9 @@ public:
 	void tranverse(red_black_tree<T>& rb)
 	{
 		//center left right
+		std::cout << std::endl;
 		tranverse(rb.get_root());
+		std::cout << std::endl;
 	}
 
 	template<class T>
