@@ -22,7 +22,15 @@ public:
 		std::cout << "test red black tree" << std::endl;
 
 		tranverse(r_b_tree);
-		/*print_red_black_tree(r_b_tree);*/
+
+		int remove[] = { 7 };
+		length = sizeof(remove) / sizeof(remove[0]);
+		for (int i = 0; i < length; ++i)
+		{
+			std::cout << "remove" << data[i] << std::endl;
+			r_b_tree.remove(data[i]);
+			tranverse(r_b_tree);
+		}
 	}
 
 	template<class T>
