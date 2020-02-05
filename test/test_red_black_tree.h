@@ -11,8 +11,14 @@ public:
 	void run()
 	{
 		//
-		int data[] = { 1,2,3,4,5,9,10,7,8,6 };
-		int length = sizeof(data) / sizeof(data[0]);
+		const int length = 10000;
+		int data[length];
+
+		for (int i = 0; i < length; ++i)
+		{
+			data[i] = std::rand() % 10000;
+		}
+
 		red_black_tree<int> r_b_tree;
 
 		for (int i = 0; i < length; ++i) {
@@ -24,13 +30,14 @@ public:
 		tranverse(r_b_tree);
 		
 		int* remove = data;
-		//length = sizeof(remove) / sizeof(remove[0]);
 		for (int i = 0; i < length; ++i)
 		{
 			std::cout << "remove " << remove[i] << std::endl;
 			r_b_tree.remove(remove[i]);
-			tranverse(r_b_tree);
+			//tranverse(r_b_tree);
 		}
+		//tranverse(r_b_tree);
+		std::cout << "finish" << std::endl;
 	}
 
 	template<class T>

@@ -304,6 +304,7 @@ private:
 				if (is_b_or_nil(node->parent->parent->right) && node == node->parent->right)
 				{
 					left_rotation(node->parent);
+					node = node->left;
 					node->parent->parent->is_black = false;
 					node->parent->is_black = true;
 					right_rotation(node->parent->parent);
@@ -336,6 +337,7 @@ private:
 				if (is_b_or_nil(node->parent->parent->left) && node == node->parent->left)
 				{
 					right_rotation(node->parent);
+					node = node->right;
 					node->parent->parent->is_black = false;
 					node->parent->is_black = true;
 					left_rotation(node->parent->parent);
@@ -367,6 +369,10 @@ private:
 			if (x == x->parent->left)
 			{
 				red_black_tree_node<T>* w = x->parent->right;
+				if (w == nullptr)
+				{
+					return;
+				}
 				//case 1
 				//uncle node is red, 
 				if (is_r(w))
@@ -375,6 +381,10 @@ private:
 					w->is_black = true;
 					left_rotation(x->parent);
 					w = x->parent->right;
+					if (w == nullptr)
+					{
+						return;
+					}
 				}
 				//case 2
 				if (is_b_or_nil(w) && is_b_or_nil(w->left) && is_b_or_nil(w->right))
@@ -390,6 +400,10 @@ private:
 					w->is_black = false;
 					right_rotation(w);
 					w = x->parent->right;
+					if (w == nullptr)
+					{
+						return;
+					}
 					//to case 4
 				}
 				//case 4
@@ -404,6 +418,10 @@ private:
 			}
 			else {
 				red_black_tree_node<T>* w = x->parent->left;
+				if (w == nullptr)
+				{
+					return;
+				}
 				//case 1
 				//uncle node is red, 
 				if (is_r(w))
@@ -412,6 +430,10 @@ private:
 					w->is_black = true;
 					right_rotation(x->parent);
 					w = x->parent->left;
+					if (w == nullptr)
+					{
+						return;
+					}
 				}
 				//case 2
 				if (is_b_or_nil(w) && is_b_or_nil(w->left) && is_b_or_nil(w->right))
@@ -427,6 +449,10 @@ private:
 					w->is_black = false;
 					left_rotation(w);
 					w = x->parent->left;
+					if (w == nullptr)
+					{
+						return;
+					}
 					//to case 4
 				}
 				//case 4
