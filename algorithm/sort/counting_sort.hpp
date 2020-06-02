@@ -1,3 +1,11 @@
+// counting sort
+//  
+//  hacat
+//  计数排序
+//  统计每个数的数量，然后按顺序输出数
+//  Created by MacBook Pro on 2018/6/1.
+//
+
 #pragma once
 #include <memory>
 #include <map>

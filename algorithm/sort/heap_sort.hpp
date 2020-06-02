@@ -1,3 +1,9 @@
+// heapSort
+//  
+//  hacat
+//  堆排序
+//  Created by MacBook Pro on 2018/6/1.
+//
 #pragma once
 
 // 最大堆调整
@@ -60,6 +66,8 @@ void buildHeap(T* data, int size, bool isMaxHeap = true) {
 
 template<class T>
 void heapSort(T* data, int size, bool order = true) {
+    if (size == 0)
+        return;
     int size_ = size;
     if(order) {
         buildHeap(data, size, true);

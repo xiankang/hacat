@@ -7,9 +7,11 @@
 
 #include "test_manager.hpp"
 #include "test_red_black_tree.h"
+#include "test_sort.hpp"
 
 int main(int argc, const char * argv[]){
-	RegisterTest(test_red_black_tree)
+	/*RegisterTest(test_red_black_tree)*/
+	RegisterTest(ShellSortTask);
 
 	TestManager::instance()->test();
 

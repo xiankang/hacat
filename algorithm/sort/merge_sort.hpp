@@ -1,7 +1,8 @@
 //
 //  MergeSort.hpp
 //  test
-//
+//  归并排序
+//  二分法，递归调用左边和右边，对两个已排序好的进行合并
 //  Created by MacBook Pro on 2018/6/2.
 //
 

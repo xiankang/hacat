@@ -5,5 +5,9 @@ set(sort_SRCS
     ${CMAKE_CURRENT_SOURCE_DIR}/quick_sort.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/counting_sort.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/radix_sort.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/selection_sort.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/bubble_sort.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/bucket_sort.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/shell_sort.h
 PARENT_SCOPE
 )

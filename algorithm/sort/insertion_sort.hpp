@@ -1,7 +1,8 @@
 //
 //  InsertionSort.hpp
 //  hacat
-//
+//  插入排序
+//  先选数据，在比较的时候，会移动数据，然后空出合适的位置给所选数据
 //  Created by MacBook Pro on 2018/6/1.
 //
 
@@ -11,16 +12,24 @@
 #include <stdio.h>
 
 template<class T>
-void insertionSort(T* data, int size){
-    for(int i=1; i<size; i++){
-        int j=i-1;
+void insertionSort(T * data, int begin, int end, int delta = 1)
+{
+    for (int i = begin + delta; i <= end; i+=delta)
+    {
+        int j = i - delta;
         T temp = data[i];
-        while(j>=0 && data[j] > temp){
-            data[j+1] = data[j];
-            j -= 1;
+        while (j >= begin && data[j] > temp)
+        {
+            data[j + delta] = data[j];
+            j -= delta;
         }
-        data[j+1] = temp;
+        data[j + delta] = temp;
     }
+}
+
+template<class T>
+void insertionSort(T* data, int size){
+    insertionSort(data, 0, size - 1);
 }
 
 #endif /* insertion_sort_hpp */

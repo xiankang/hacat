@@ -1,3 +1,10 @@
+//
+//  quick sort
+//  test
+//  快速排序
+//  Created by MacBook Pro on 2018/6/2.
+//
+
 #pragma once
 
 
@@ -31,6 +38,7 @@ int randomPartial(T* data, int q, int r) {
     return partial(data, q, r);
 }
 
+//快速排序
 template<class T>
 void quickSort(T* data, int q, int r) {
     if(q<r){
